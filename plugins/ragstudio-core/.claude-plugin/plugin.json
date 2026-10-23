@@ -1,0 +1,8 @@
+{
+  "name": "ragstudio-core",
+  "version": "1.3.0",
+  "description": "RAGStudio architecture reference, contract checker, PR-ready and handoff workflows, token-saving hooks",
+  "author": {
+    "name": "RAGStudio Team"
+  }
+}

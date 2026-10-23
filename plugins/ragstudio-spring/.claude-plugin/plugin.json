@@ -1,0 +1,8 @@
+{
+  "name": "ragstudio-spring",
+  "version": "1.0.3",
+  "description": "RAGStudio Spring Boot 3.5 / Gradle / Java 21 skills, agents and hooks",
+  "author": {
+    "name": "RAGStudio Team"
+  }
+}

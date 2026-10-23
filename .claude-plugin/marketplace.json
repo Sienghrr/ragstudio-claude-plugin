@@ -1,0 +1,27 @@
+{
+  "name": "ragstudio",
+  "owner": {
+    "name": "RAGStudio Team"
+  },
+  "metadata": {
+    "description": "Shared Claude Code setup for the RAGStudio microservices",
+    "version": "1.3.0"
+  },
+  "plugins": [
+    {
+      "name": "ragstudio-core",
+      "source": "./plugins/ragstudio-core",
+      "description": "Architecture reference (ERD, events, internal APIs, business rules), docs-writer skill and agent with auto-docs hook, contract checker, PR and handoff workflows, read guard and session context hooks. Enable in every repo."
+    },
+    {
+      "name": "ragstudio-spring",
+      "source": "./plugins/ragstudio-spring",
+      "description": "Spring Boot 3.5 / Gradle / Java 21: endpoint, RabbitMQ and Flyway skills, reviewer and test-runner agents, format-on-edit and compile-on-stop hooks."
+    },
+    {
+      "name": "ragstudio-python",
+      "source": "./plugins/ragstudio-python",
+      "description": "Python 3.12 / FastAPI / uv: endpoint, aio-pika and Alembic skills, reviewer and test-runner agents, Ruff format-on-edit and lint-on-stop hooks."
+    }
+  ]
+}

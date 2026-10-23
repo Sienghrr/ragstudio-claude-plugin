@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Compact Gradle test runner (on PATH while the ragstudio-spring plugin is enabled).
+# Usage: rs-test-java [--tests 'Pattern']
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+for py in python3 python; do
+  if command -v "$py" >/dev/null 2>&1; then
+    exec "$py" "$here/scripts/test_summary_java.py" "$@"
+  fi
+done
+echo "Python 3 not found; running Gradle directly." >&2
+exec ./gradlew test --console=plain -q "$@"

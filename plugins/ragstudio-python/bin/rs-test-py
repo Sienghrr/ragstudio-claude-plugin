@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Compact pytest runner (on PATH while the ragstudio-python plugin is enabled).
+# Usage: rs-test-py [pytest args, e.g. tests/test_parsers.py -k pdf]
+# Prints only failures, errors and the summary line, capped at 60 lines.
+out="$(uv run pytest -q --no-header -rfE --tb=short -p no:cacheprovider "$@" 2>&1)"
+code=$?
+printf '%s\n' "$out" | grep -v -E '^\s*$|^\.+\s*\[|^platform |^rootdir|^plugins:' | tail -n 60
+exit $code

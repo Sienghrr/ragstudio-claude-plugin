@@ -1,0 +1,8 @@
+{
+  "name": "ragstudio-python",
+  "version": "1.1.1",
+  "description": "RAGStudio Python 3.12 / FastAPI / uv skills, agents and hooks",
+  "author": {
+    "name": "RAGStudio Team"
+  }
+}
